@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { catchError } from 'rxjs/internal/operators';
-import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { catchError, map } from 'rxjs/operators';  // 'rxjs/internal/operators' doesn't work
+import { HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 // @Injectable({
 //   providedIn: 'root'
@@ -21,6 +20,7 @@ const apiUrl = 'https://movies-my-flix-307c49ee24e7.herokuapp.com/';
   providedIn: 'root'
 })
 
+// export class UserRegistrationService {
 export class FetchApiDataService {
   // Inject the HttpClient module to the constructor params
  // This will provide HttpClient to the entire class, making it available via this.http
@@ -182,7 +182,8 @@ export class FetchApiDataService {
 
 
   // Non-typed response extraction
-  private extractResponseData(res: Response): any {
+  // private extractResponseData(res: Response): any {
+  private extractResponseData(res: HttpResponse<any>): any {
     const body = res;
     return body || { };
   }
