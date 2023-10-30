@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" class="nav-bar">
+  <mat-toolbar-row>
+    <span style="font-weight: bold; font-size: larger;">myFlix</span>
+    <div style="flex: 1; text-align: right;">
+      <a routerLink="/profile" class="navbar-item" style="text-decoration: none; color: white; margin-right: 25px;" routerLinkActive="active">
+        My Profile
+      </a>
+      <a routerLink="/movies" class="navbar-item" style="text-decoration: none; color: white; margin-right: 25px;" routerLinkActive="active">
+        All Movies
+      </a>
+      <span class="navbar-item" (click)="logoutUser()" style="text-decoration: none; cursor: pointer;">
+        Logout
+      </span>
+    </div>
+  </mat-toolbar-row> 
+</mat-toolbar>

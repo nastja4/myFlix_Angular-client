@@ -1,1 +1,33 @@
-<p>welcome-page works!</p>
+<div class="main-container">
+<div class="main-page" >
+  <div class="bgr-img" [style.background-image]="backgroundImage"></div>
+  <div class="content-container">
+    <h1>
+      Welcome to myFlix!
+    </h1>
+    <div class="buttons-container">
+      <button mat-raised-button (click)="openUserRegistrationDialog()"
+        style="margin-right: 10px;"
+        color="primary"
+      >
+        Sign Up
+      </button>
+
+      <button mat-raised-button (click)="openUserLoginDialog()"   
+        style="margin-right: 10px;" 
+        color="primary"
+      >
+        Login
+      </button>
+    </div>  
+  </div>  
+</div>
+
+  <footer class="footer">
+    <a href=
+      "https://www.freepik.com/free-vector/hand-drawn-doodle-movie-cinema-set_30971566.htm#query=movies&position=0&from_view=search&track=sph"
+    >
+      Image by redgreystock
+    </a> on Freepik
+  </footer>
+</div>

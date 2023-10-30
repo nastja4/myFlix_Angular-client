@@ -1,4 +1,15 @@
-// .movie-card {
-//   width: 50px; /* Set the desired width */
-//   height: 50px; /* Set the desired height */
+// app-nav-bar {
+  
 // }
+
+.cards-container {
+  display: flex;
+  overflow-x: auto; //Enable horizontal scrolling for overflowed content 
+  
+}
+
+.movie-card {
+  flex: 1 1 auto; // 1 - shrink, 0 - not 
+  margin-right: 10px;
+}
+

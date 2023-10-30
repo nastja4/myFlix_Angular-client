@@ -1,0 +1,82 @@
+<app-nav-bar></app-nav-bar>
+<div class="profile-page" >
+  <h1>Profile Information</h1>
+  <div class="profile-info">
+    <p><strong>Username: </strong>{{ userData.Username }}</p>
+    <p><strong>Email: </strong>{{ userData.Email }}</p>
+    <p><strong>Birthday: </strong>{{ userData.Birthday | date:'yyyy-MM-dd' }}</p>
+  </div>
+
+  <br>
+  <div class="edit-form">
+    <h3><strong>Here you can edit your Profile Information:</strong> </h3>
+    <form>
+      <mat-form-field class="form-field">
+        <label for="username">Username:</label>
+        <input
+          matInput
+          [(ngModel)]="userData.Username"
+          placeholder="Username"
+          type="text"
+          id="username"
+          name="Username"
+          required
+        >
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <label for="password">Password:</label>
+        <input
+          matInput
+          [(ngModel)]="userData.Password"
+          type="password"
+          placeholder="Password"
+          id="password"
+          name="Password"
+          required
+        >
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <label for="email">Email:</label>
+        <input
+          matInput
+          [(ngModel)]="userData.Email"
+          type="email"
+          placeholder="Email"
+          id="email"
+          name="Email"
+          required
+        >
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <label for="birthday">Birthday:</label>
+        <input
+          matInput
+          
+          type="date"
+          placeholder="Birthday"
+          id="birthday"
+          name="Birthday"
+        >
+      </mat-form-field>
+    </form>
+        
+    <button mat-raised-button (click)="updateUserProfile()" color="primary" style="margin-bottom: 30px;">Save Changes</button>      
+    <br>
+    <button mat-raised-button (click)="deleteUser()" color="warn" style="background-color: #A82424;">Delete Profile</button>
+  </div>
+
+  <br>
+  <div class="favorite-movies">
+    <h3>Favorite Movies:</h3>
+    <ul>
+      <li *ngFor="let movie of favoriteMovies">
+        {{ movie.Title }}
+      </li>
+    </ul>    
+  </div>
+
+</div>
+
+
+
+

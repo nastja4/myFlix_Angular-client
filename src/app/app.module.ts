@@ -9,14 +9,31 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserRegistrationFormComponent } from './user-registration-form/user-registration-form.component';
 import { UserLoginFormComponent } from './user-login-form/user-login-form.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { MovieInfoComponent } from './movie-info/movie-info.component';
+import { DirectorInfoComponent } from './director-info/director-info.component';
+import { GenreInfoComponent } from './genre-info/genre-info.component';
+
+
+// defines routes
+const appRoutes: Routes = [    
+  { path: 'welcome', component: WelcomePageComponent },
+  { path: 'movies', component: MovieCardComponent },
+  { path: 'profile', component: UserProfileComponent },
+  { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
+];
 
 @NgModule({
   declarations: [
@@ -24,9 +41,16 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
     UserRegistrationFormComponent,
     UserLoginFormComponent,
     MovieCardComponent,
-    WelcomePageComponent
+    WelcomePageComponent,
+    UserProfileComponent,
+    NavBarComponent,
+    MovieInfoComponent,
+    DirectorInfoComponent,
+    GenreInfoComponent,
   ],
   imports: [
+    RouterModule.forRoot(appRoutes),
+
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
@@ -38,9 +62,12 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
     MatFormFieldModule,
     MatDialogModule,
     MatSnackBarModule,
-    FormsModule
+    FormsModule,
+    MatIconModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

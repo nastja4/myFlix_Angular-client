@@ -1,0 +1,49 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+}
+
+.buttons-container {
+  display: flex; /* Display buttons in a row */
+  justify-content: center; /* Center buttons horizontally */
+}
+
+.bgr-img {  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.content-container {
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px; /* Add some padding for spacing */
+
+  a {
+    text-decoration: none; /* Remove underlines from links */
+  }
+}
