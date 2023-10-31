@@ -69,8 +69,8 @@
   <div class="favorite-movies">
     <h3>Favorite Movies:</h3>
     <ul>
-      <li *ngFor="let movie of favoriteMovies">
-        {{ movie.Title }}
+      <li *ngFor="let movieTitle of getFavoriteMovieTitles()">
+        {{ movieTitle }}
       </li>
     </ul>    
   </div>

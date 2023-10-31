@@ -13,6 +13,9 @@ import { MatDialog } from '@angular/material/dialog';
 export class UserProfileComponent implements OnInit{
   user: any = {};
   favoriteMovies: any[] = [];
+  allMovies: any[] = []; // New array to store all movies
+
+ 
 
   @Input() userData = { Username: '', Password: '', Email: '', Birthday: '' };
 
@@ -25,6 +28,7 @@ export class UserProfileComponent implements OnInit{
 
   ngOnInit(): void {
     this.getUserProfile();
+    this.getAllMovies(); // Fetch all movies
   }
 
   getUserProfile(): void {
@@ -35,8 +39,22 @@ export class UserProfileComponent implements OnInit{
       this.userData.Birthday = this.user.Birthday;
       if (this.user.FavoriteMovies) {
         this.favoriteMovies = this.user.FavoriteMovies;
+        
       }     
     });
+  }
+
+  getAllMovies(): void {
+    this.fetchApiData.getAllMovies().subscribe((data: any) => {
+      this.allMovies = data;
+    });
+  }
+  
+  getFavoriteMovieTitles(): string[] {
+    // Filter the favorite movies and get their titles
+    return this.allMovies
+      .filter((movie) => this.favoriteMovies.includes(movie._id))
+      .map((movie) => movie.Title);
   }
 
   updateUserProfile(): void {

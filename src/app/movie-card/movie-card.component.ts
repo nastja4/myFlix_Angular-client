@@ -30,7 +30,8 @@ export class MovieCardComponent {
   ) { }
 
   ngOnInit(): void {
-    this.getMovies();    
+    this.getMovies();   
+    this.getFavorites(); 
   }
 
   
@@ -72,7 +73,12 @@ export class MovieCardComponent {
     })
   }
 
-
+  getFavorites(): void {
+    this.fetchApiData.getFavoriteMovies().subscribe((res: any) => {
+      this.favoriteMovies = res;
+      return this.favoriteMovies;
+    });
+  }
 
   isFavorite(movieId: string): boolean {
     return this.favoriteMovies.includes(movieId);
@@ -87,7 +93,6 @@ export class MovieCardComponent {
       this.addToFavorites(movieId);
     }
   }
-
 
   addToFavorites(movieId: string): void {
     this.fetchApiData.addMovieToFavorites(movieId).subscribe((data: any) => {
