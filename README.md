@@ -1,29 +1,74 @@
-# MyFlixAngularClient
+# MyFlix_Angular Client
 
 The myFlix Angular App is a single-page, responsive movie application built using Angular. It serves as the client-side interface for the myFlix movie app, interacting with the existing server-side code and database through REST API endpoints.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Description](#description)
+- [User Stories](#user-stories)
+- [Key Features](#key-features)
+- [Technical Requirements](#technical-requirements)
+- [Getting Started](#getting-started)
+- [Code Scaffolding](#code-scaffolding)
+- [Contributing](#contributing)
+- [Further help](#further-help)
+- [License](#license)
 
-## Code scaffolding
+## Description
+
+The myFlix Angular App allows users to access information about movies, directors, and genres. Users can create profiles to save data about their favorite movies, making it a valuable resource for movie enthusiasts.
+
+## User Stories
+- As a user, I can receive information on movies, directors, and genres.
+- As a user, I can create a profile to save data about my favorite movies.
+
+## Key Features
+
+- Welcome view for user authentication (login/register).
+- View all movies once authenticated.
+- Single movie view with additional features:
+  - Director view: Details about the director of the movie.
+  - Genre view: Details about the genre of the movie.
+
+## Technical Requirements
+
+- Angular (version 9 or later)
+- Node.js (latest version) and npm
+- User registration and login forms
+- Angular Material for UI design
+- Codebase comments using Typedoc
+- Technical documentation using JSDoc
+- Hosting on GitHub Pages
+
+## Getting Started
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+```
+2. Install project dependencies:
+```bash
+cd myFlix-Angular
+npm install -g @angular/cli (or @angular/cli@latest)
+```
+For using Angular Material (variety of UI components):
+```
+ng add @angular/material
+```
+3. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Code Scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Contributing
+Contributions are welcome! 
 
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## License
+This project is licensed under the terms of the MIT License. See the LICENSE file for details.
