@@ -60,21 +60,41 @@
       </mat-form-field>
     </form>
         
-    <button mat-raised-button (click)="updateUserProfile()" color="primary" style="margin-bottom: 30px;">Save Changes</button>      
+    <button mat-raised-button (click)="updateUserProfile()" color="primary" style="margin-bottom: 30px; background-color: #0057AD;">Save Changes</button>      
     <br>
-    <button mat-raised-button (click)="deleteUser()" color="warn" style="background-color: #A82424;">Delete Profile</button>
+    <button mat-raised-button (click)="deleteUser()" color="warn" style="background-color: #A81521;">Delete Profile</button>
   </div>
 
   <br>
   <div class="favorite-movies">
     <h3>Favorite Movies:</h3>
-    <ul>
-      <li *ngFor="let movieTitle of getFavoriteMovieTitles()">
-        {{ movieTitle }}
-      </li>
-    </ul>    
+    <div class="movie-card-container">
+    <mat-card *ngFor="let favoriteMovie of getFavorites()" class="movie-card">
+      <mat-card-header>
+        <mat-card-title>{{ favoriteMovie.Title }}</mat-card-title>
+        <mat-card-subtitle>Directed by: {{ favoriteMovie.Director.Name }}</mat-card-subtitle>
+      </mat-card-header>
+      <img [src]="favoriteMovie.ImagePath" [alt]="favoriteMovie.Title" style="width: 100%; height: 100%;" />
+      <mat-card-actions>
+        <button mat-button (click)="openGenreDialog(favoriteMovie.Genre)" color="primary">
+          Genre
+        </button>
+  
+        <button mat-button (click)="openDirectorDialog(favoriteMovie.Director)" color="primary">
+          Director
+        </button>
+  
+        <button mat-button (click)="openSynopsisDialog(favoriteMovie.Description)" color="primary">
+          Synopsis
+        </button>  
+        
+        <button mat-icon-button (click)="toggleFavorite(favoriteMovie._id)">
+          <mat-icon>{{ isFavorite(favoriteMovie._id) ? 'favorite' : 'favorite_border' }}</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+    <div>
   </div>
-
 </div>
 
 

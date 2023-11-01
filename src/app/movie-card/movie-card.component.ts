@@ -7,6 +7,7 @@ import { Subscription } from 'rxjs';
 import { MovieInfoComponent } from '../movie-info/movie-info.component';
 import { DirectorInfoComponent } from '../director-info/director-info.component';
 import { GenreInfoComponent } from '../genre-info/genre-info.component';
+import { MovieDetailsDialogComponent } from '../movie-details-dialog/movie-details-dialog.component';
 
 @Component({
   selector: 'app-movie-card',
@@ -46,17 +47,17 @@ export class MovieCardComponent {
     });
   }
   
-  openSynopsisDialog(title: string, description: string): void {
-    this.dialog.open(MovieInfoComponent, {
+  openSynopsisDialog(synopsis: string): void {
+    this.dialog.open(MovieDetailsDialogComponent, {
       data: {
-        title: title, 
-        description: description 
+        title: "Description", 
+        content: synopsis, 
       }
     });
   }
 
   openDirectorDialog(director: any): void {
-    this.dialog.open(DirectorInfoComponent, {
+    this.dialog.open(MovieDetailsDialogComponent, {
       data: {
         title: director.Name,
         content: director.Bio,
@@ -65,7 +66,7 @@ export class MovieCardComponent {
   }
     
   openGenreDialog(genre: any): void {
-    this.dialog.open(GenreInfoComponent, {
+    this.dialog.open(MovieDetailsDialogComponent, {
       data: {
         title: genre.Name,
         content: genre.Description,

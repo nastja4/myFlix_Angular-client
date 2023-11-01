@@ -1,10 +1,14 @@
 <app-nav-bar></app-nav-bar>
 
 <!-- //  *ngFor directive is being used to display all returned movies, where each movie is displayed in its own card -->
-<div class="cards-container">  
+<div class="movies-page">
+  <h1>Movies</h1>
+
+
+<div class="cards-container">   
   <mat-card *ngFor="let movie of movies;" class="movie-card">
     <mat-card-header>
-      <mat-card-title>{{movie.Title}}</mat-card-title>
+      <mat-card-title><strong>{{movie.Title}}</strong></mat-card-title>
       <mat-card-subtitle>Directed by: {{movie.Director.Name}}</mat-card-subtitle>
     </mat-card-header>
     <img 
@@ -25,7 +29,7 @@
         Director
       </button>
 
-      <button mat-button (click)="openSynopsisDialog(movie.Title, movie.Description)"
+      <button mat-button (click)="openSynopsisDialog(movie.Description)"
         color="primary"
       >
         Synopsis
@@ -36,4 +40,6 @@
       </button>
     </mat-card-actions>
   </mat-card>
+  
+</div>
 </div>

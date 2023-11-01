@@ -25,6 +25,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MovieInfoComponent } from './movie-info/movie-info.component';
 import { DirectorInfoComponent } from './director-info/director-info.component';
 import { GenreInfoComponent } from './genre-info/genre-info.component';
+import { MovieDetailsDialogComponent } from './movie-details-dialog/movie-details-dialog.component';
 
 
 // defines routes
@@ -47,6 +48,7 @@ const appRoutes: Routes = [
     MovieInfoComponent,
     DirectorInfoComponent,
     GenreInfoComponent,
+    MovieDetailsDialogComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

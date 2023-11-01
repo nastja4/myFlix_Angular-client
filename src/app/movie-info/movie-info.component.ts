@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-movie-info',
   templateUrl: './movie-info.component.html',
   styleUrls: ['./movie-info.component.scss']
 })
+
 export class MovieInfoComponent {
 
 }
