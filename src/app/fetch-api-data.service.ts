@@ -3,15 +3,6 @@ import { catchError, map } from 'rxjs/operators';  // 'rxjs/internal/operators' 
 import { HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class FetchApiDataService {
-
-//   constructor() { }
-// }
-
-
 //Declaring the api url that will provide data for the client app
 const apiUrl = 'https://movies-my-flix-307c49ee24e7.herokuapp.com/';
 
@@ -111,7 +102,6 @@ export class FetchApiDataService {
       catchError(this.handleError)
     );
   }
-  
 
   // Get favorite movies for a user  
   getFavoriteMovies(): Observable<any> {
@@ -157,7 +147,6 @@ export class FetchApiDataService {
       catchError(this.handleError)
     );
   }
-
 
   // Edit user info
   editUser(userData: any): Observable<any> {

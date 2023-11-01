@@ -1,27 +1,15 @@
-// app-nav-bar {
-  
-// }
 .movies-page {
   background-color: #A5A522;
   padding: 30px;
 }
 
 .cards-container {  
-  // display: flex;
-  // overflow-x: auto; //Enable horizontal scrolling for overflowed content 
-  
-  
   display: grid;
   align-items: stretch;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   grid-auto-rows: 1fr;
-  margin: auto;
-  
+  margin: auto;  
   grid-gap: 20px;
 }
 
-// .movie-card {
-//   flex: 1 1 auto; // 1 - shrink, 0 - not 
-//   margin-right: 10px;
-// }
 

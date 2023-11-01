@@ -3,10 +3,6 @@ import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
-import { MovieInfoComponent } from '../movie-info/movie-info.component';
-import { DirectorInfoComponent } from '../director-info/director-info.component';
-import { GenreInfoComponent } from '../genre-info/genre-info.component';
 import { MovieDetailsDialogComponent } from '../movie-details-dialog/movie-details-dialog.component';
 
 @Component({
@@ -20,8 +16,7 @@ export class MovieCardComponent {
   movies: any[] = [];
   favoriteMovies: any[] = [];
 
-  @Input() movie: any;
-  
+  @Input() movie: any;  
 
   constructor(
     public fetchApiData: FetchApiDataService,

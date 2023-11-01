@@ -4,9 +4,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 
-import { MovieInfoComponent } from '../movie-info/movie-info.component';
-import { DirectorInfoComponent } from '../director-info/director-info.component';
-import { GenreInfoComponent } from '../genre-info/genre-info.component';
 import { MovieDetailsDialogComponent } from '../movie-details-dialog/movie-details-dialog.component';
 
 
@@ -34,9 +31,9 @@ export class UserProfileComponent implements OnInit{
   ngOnInit(): void {
     this.getUserProfile();  // fetching and setting the user's profile data
     this.getMovies();  // fetch all movies
-
     this.getFavorites();
   }
+
 
   getUserProfile(): void {
     this.fetchApiData.getOneUser().subscribe((result: any) => {
@@ -69,17 +66,11 @@ export class UserProfileComponent implements OnInit{
         this.snackBar.open('Account deleted successfully!', 'OK', {
           duration: 2000
         });
-        // localStorage.removeItem('user');
-        // localStorage.removeItem('token');
         localStorage.clear();
         this.router.navigate(['welcome']);
       });
     }
   }
-
-
-
-
 
   openGenreDialog(genre: any): void {
     this.dialog.open(MovieDetailsDialogComponent, {
@@ -108,7 +99,6 @@ export class UserProfileComponent implements OnInit{
     });
   }
 
-
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe({
       next: (data: any) => {
@@ -120,70 +110,33 @@ export class UserProfileComponent implements OnInit{
     });
   }
   
-  // getFavoriteMovieTitles(): string[] {
-  //   // Filter the favorite movies and get their titles
-  //   return this.allMovies
-  //     .filter((movie) => this.favoriteMovies.includes(movie._id))
-  //     .map((movie) => movie.Title);
-  // }
-  // getFavorites(): any[] {
-  //   // Filter the favorite movies and get their details
-  //   return this.allMovies
-  //     .filter((movie) => this.favoriteMovies.includes(movie._id));
-  // }
   getFavorites(): any[] {
     // Filter the favorite movies and get their details
     return this.movies
-    .filter((movie) => this.favoriteMovies.includes(movie._id));
-    
-  }
-  
+    .filter((movie) => this.favoriteMovies.includes(movie._id));    
+  }  
 
   isFavorite(movieId: string): boolean {
     return this.favoriteMovies.includes(movieId);
   }
   
-  // toggleFavorite(movieId: string): void {
-  //   if (this.isFavorite(movieId)) {
-  //     // Remove the movie from favorites
-  //     this.favoriteMovies = this.favoriteMovies.filter((id) => id !== movieId);
-  //   } else {
-  //     // Add the movie to favorites
-  //     this.favoriteMovies.push(movieId);
-  //   }
-  // }
   toggleFavorite(movieId: string): void {
     if (this.isFavorite(movieId)) {
-      // Remove the movie from favorites
       this.removeFromFavorites(movieId);
     } else {
-      // Add the movie to favorites
       this.addToFavorites(movieId);
     }
   }
   
   removeFromFavorites(movieId: string): void {
     this.fetchApiData.deleteMovieFromFavorites(movieId).subscribe((data: any) => {
-      // Handle the response after removing the movie from favorites
-      console.log(data);
       this.favoriteMovies = this.favoriteMovies.filter((id) => id !== movieId); // Update the list of favorite movies
     });
   }
 
   addToFavorites(movieId: string): void {
     this.fetchApiData.addMovieToFavorites(movieId).subscribe((data: any) => {
-      // Handle the response after adding the movie to favorites
-      console.log(data);
       this.favoriteMovies.push(movieId); // Update the list of favorite movies
     });
-  }
-
-
-
-
-  
-
-  
-  
-  
+  }  
 }

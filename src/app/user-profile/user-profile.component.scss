@@ -1,11 +1,9 @@
 html, body {
-  // margin: 0;
-  // padding: 0;
   height: 100%;  
 }
 
 .profile-page {
-  background-color: #A5A522; // #FFE0FF;
+  background-color: #A5A522; 
   padding: 30px;
 }
 
@@ -13,25 +11,14 @@ html, body {
   margin-right: 2px;
 }
 
-// ul {
-//   list-style: none;
-// }
-
-/* user-profile.component.scss */
-// .favorite-movies {
-//   overflow-x: auto; /* Enable horizontal scrolling */
-// }
-
 .movie-card-container {
   display: flex; /* Arrange movie cards in a horizontal row */
-//   gap: 10px; /* Add spacing between movie cards */
+  gap: 10px; /* Add spacing between movie cards */
 //   white-space: nowrap; /* Prevent wrapping of movie cards to the next line */
   overflow-x: auto; /* Enable scrolling for the container */
 //   max-width: 100%; /* Allow the container to take the full width */
 }
 
-// /* Adjust the size of each movie card */
 .movie-card {
   flex: 0 0 250px; /* Set a fixed width for each card (adjust the width as needed) */
-  margin-right: 10px;
 }

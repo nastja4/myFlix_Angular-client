@@ -16,6 +16,7 @@ export class WelcomePageComponent {
   ngOnInit(): void {
   }
 
+
   // This is the function that will open the dialog when the signup button is clicked  
   openUserRegistrationDialog(): void {
     this.dialog.open(UserRegistrationFormComponent, {
@@ -28,12 +29,4 @@ export class WelcomePageComponent {
       width: '280px'    // Assigning the dialog a width
     });
   }
-
-  // openMoviesDialog(): void {
-  //   this.dialog.open(MovieCardComponent, {
-  //     width: '500px'
-  //   });
-  // }
-
-
 }
