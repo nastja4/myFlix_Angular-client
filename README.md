@@ -4,6 +4,20 @@ The myFlix Angular App is a single-page, responsive movie application built usin
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
 
+Screenshots:
+
+
+<img src="https://github.com/nastja4/myFlix_Angular-client/assets/126527606/b1fd274e-69ca-4a98-92cd-5e95aaf21889" width="500" alt="Screenshot (409)">
+
+<img src="https://github.com/nastja4/myFlix_Angular-client/assets/126527606/9ef47950-6d41-4a0f-9dd2-c89e854b4c4b" width="500" alt="Screenshot (412)">
+
+<img src="https://github.com/nastja4/myFlix_Angular-client/assets/126527606/00dae250-0550-4f28-96d5-25a354f47f58" width="500" alt="Screenshot (410)">
+
+<img src="https://github.com/nastja4/myFlix_Angular-client/assets/126527606/9d855fc4-5d59-44b8-84aa-9b49965c5a17" width="500" alt="Screenshot (411)">
+
+
+
+
 ## Table of Contents
 
 - [Description](#description)
