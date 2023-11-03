@@ -8,13 +8,17 @@ https://nastja4.github.io/myFlix_Angular-client/
 
 Screenshots:
 
-<img src="https://github.com/nastja4/myFlix_Angular-client/assets/126527606/b1fd274e-69ca-4a98-92cd-5e95aaf21889" width="500" alt="Screenshot (409)">
+<img src="https://github.com/nastja4/myFlix_Angular-client/assets/126527606/5f440900-defb-4439-9c57-1b564d5ee843" width="500" alt="Screenshot">
 
-<img src="https://github.com/nastja4/myFlix_Angular-client/assets/126527606/9ef47950-6d41-4a0f-9dd2-c89e854b4c4b" width="500" alt="Screenshot (412)">
+<img src="https://github.com/nastja4/myFlix_Angular-client/assets/126527606/501d719f-ed94-4cf1-9768-e5113f3199c5" width="500" alt="Screenshot">
 
-<img src="https://github.com/nastja4/myFlix_Angular-client/assets/126527606/00dae250-0550-4f28-96d5-25a354f47f58" width="500" alt="Screenshot (410)">
+<img src="https://github.com/nastja4/myFlix_Angular-client/assets/126527606/b1fd274e-69ca-4a98-92cd-5e95aaf21889" width="500" alt="Screenshot">
 
-<img src="https://github.com/nastja4/myFlix_Angular-client/assets/126527606/9d855fc4-5d59-44b8-84aa-9b49965c5a17" width="500" alt="Screenshot (411)">
+<img src="https://github.com/nastja4/myFlix_Angular-client/assets/126527606/9ef47950-6d41-4a0f-9dd2-c89e854b4c4b" width="500" alt="Screenshot">
+
+<img src="https://github.com/nastja4/myFlix_Angular-client/assets/126527606/00dae250-0550-4f28-96d5-25a354f47f58" width="500" alt="Screenshot">
+
+<img src="https://github.com/nastja4/myFlix_Angular-client/assets/126527606/9d855fc4-5d59-44b8-84aa-9b49965c5a17" width="500" alt="Screenshot">
 
 
 
