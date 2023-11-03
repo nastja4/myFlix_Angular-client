@@ -1,11 +1,12 @@
 # MyFlix_Angular Client
 
 The myFlix Angular App is a single-page, responsive movie application built using Angular. It serves as the client-side interface for the myFlix movie app, interacting with the existing server-side code and database through REST API endpoints.
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
 
-Screenshots:
+Link:
+https://nastja4.github.io/myFlix_Angular-client/
 
+Screenshots:
 
 <img src="https://github.com/nastja4/myFlix_Angular-client/assets/126527606/b1fd274e-69ca-4a98-92cd-5e95aaf21889" width="500" alt="Screenshot (409)">
 
